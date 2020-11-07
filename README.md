@@ -24,9 +24,9 @@
 ## How to make the most out of this boilerplate: 
  <br>
 
-* inside src/config/.env -> replace `<username>`, `<password>`, `<dbName>` in the MONGO_URI
-* Uncomment mongo comments in src/server.js once you have added your cloud db details in the repo
-* Require the necessary schemas in the controller pages to perform CRUD
+* inside src/config/.env -> replace `<username>`, `<password>`, `<dbName>` inside the MONGO_URI
+* Uncomment mongo comments in src/server.js
+* Require the necessary schemas in the controller files to perform CRUD
 * On adding a new controller, make sure to add it's corresponding route in src/routers/`<corresponding-route-file>`.js
 
  <br>
@@ -75,7 +75,7 @@
  <br>
  <br>
 
-## use without docker 
+## Use without docker 
  <br>
 
 clone the repo
