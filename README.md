@@ -75,8 +75,8 @@
 ## use without docker 
  <br>
 
->> clone the repo<br>
->> cd into the repo then run the following commands:<br>
+clone the repo
+cd into the repo then run the following commands:
 >>     cd ./node-project  <br>
 >>     npm install <br>
 >>     npm start <br>
