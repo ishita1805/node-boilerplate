@@ -1,6 +1,6 @@
 const paginateGet = (model)=>{
     // pagination for get requests
-  return  (req,res,next) =>{
+  return async (req,res,next) =>{
       const page = parseInt(req.query.page);
       const limit = parseInt(req.query.limit);
 
@@ -9,7 +9,7 @@ const paginateGet = (model)=>{
 
       let results = {};
 
-      if(endIndex < model.length) {
+      if(endIndex < model.countDocuments().exec()) {
          results.next = {
              page: page+1,
              limit: limit
@@ -22,9 +22,15 @@ const paginateGet = (model)=>{
             limit: limit
         }
       }
-
-      results.result = model.slice(startIndex, endIndex);
-
+      try{
+        results.result =await model.find().limit(limit).skip(startIndex).exec()
+      }
+      catch {(e)=>{
+        res.status(500).json({
+          message: e.message
+        })
+      }}
+      
       res.paginatedResults = results;
       next()
 

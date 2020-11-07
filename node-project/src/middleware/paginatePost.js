@@ -1,6 +1,6 @@
 const paginatePost = (model)=>{
     // pagination for post requests
-  return  (req,res,next) =>{
+  return  async (req,res,next) =>{
       const page = parseInt(req.body.page);
       const limit = parseInt(req.body.limit);
 
@@ -9,7 +9,7 @@ const paginatePost = (model)=>{
 
       let results = {};
 
-      if(endIndex < model.length) {
+      if(endIndex < await model.countDocuments().exec()) {
          results.next = {
              page: page+1,
              limit: limit
@@ -23,7 +23,14 @@ const paginatePost = (model)=>{
         }
       }
 
-      results.result = model.slice(startIndex, endIndex);
+      try{
+        results.result =await model.find().limit(limit).skip(startIndex).exec()
+      }
+      catch {(e)=>{
+        res.status(500).json({
+          message: e.message
+        })
+      }}
 
       res.paginatedResults = results;
       next()
