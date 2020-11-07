@@ -23,10 +23,10 @@
 ## How to make the most out of this boilerplate: 
  <br>
 
-inside src/config/.env -> replace `<username>`, `<password>`, `<dbName>` in the MONGO_URI
-Uncomment mongo comments in src/server.js once you have added your cloud db details in the repo
-Require the necessary schemas in the controller pages to perform CRUD
-On adding a new controller, make sure to add it's corresponding route in src/routers/`<corresponding-route-file>`.js
+* inside src/config/.env -> replace `<username>`, `<password>`, `<dbName>` in the MONGO_URI
+* Uncomment mongo comments in src/server.js once you have added your cloud db details in the repo
+* Require the necessary schemas in the controller pages to perform CRUD
+* On adding a new controller, make sure to add it's corresponding route in src/routers/`<corresponding-route-file>`.js
 
  <br>
  <br>
@@ -77,8 +77,8 @@ On adding a new controller, make sure to add it's corresponding route in src/rou
 
 ### clone the repo
 >> cd into the repo then run the following commands:
->>     cd ./node-project
->>     npm install
->>     npm start
+>>     cd ./node-project  <br>
+>>     npm install <br>
+>>     npm start <br>
 
 
