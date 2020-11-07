@@ -1,0 +1,45 @@
+{
+  "name": "node-boilerplate",
+  "version": "1.0.0",
+  "description": "this a node-mongo-express boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
+  },
+  "keywords": [
+    "boilerplate",
+    "REST",
+    "es6",
+    "es7",
+    "es8",
+    "es9",
+    "node.js",
+    "express",
+    "mongodb",
+    "mongoose",
+    "docker",
+    "prettier"
+  ],
+  "author": "Ishita Kabra",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validation": "^3.0.6",
+    "joi": "^17.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.13",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "husky": "^4.3.0",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.1.2"
+  }
+}
