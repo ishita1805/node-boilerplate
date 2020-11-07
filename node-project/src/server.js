@@ -31,7 +31,7 @@ app.use(compression({
 //  Main Route
 app.get("/", async (req,res)=>{
     res.status(201).json({
-        welcome:'welcome to your node boiler plate',
+        welcome:'welcome to your node boilerplate',
         port:`This docker container is running on port ${port}`,
         loadBalancing: 'refresh to checkout load balancing',
         learnMore:'Refer to the README.md file to know how to get the most out of your boilerplate',
