@@ -39,7 +39,7 @@
  <br>
 
 ### -- building an image:
->> docker build -t <you-app-name> .
+>> docker build -t `<you-app-name>` .
  <br> 
 
 ### -- view all images:
@@ -47,7 +47,9 @@
  <br>
 
 ### -- create a container: 
->> docker run --name \<you-app-name> -p 80:3001 <you-app-name>
+>> docker run --name `<you-app-name>` -p 80:3001 `<you-app-name>`
+
+(you can use any ports in place of 80 and 3001)
  <br> 
 
 ### -- view all container:
@@ -59,15 +61,15 @@
  <br>
 
 ### -- delete a container:
->>docker stop <container-name-or-id>
->> docker rm <container-name-or-id>
+>>docker stop `<container-name-or-id>`
+>> docker rm `<container-name-or-id>`
  or 
 >>docker ps -a 
->>docker rm -f <container-id>
+>>docker rm -f `<container-id>`
  <br>
 
 ### -- delete an image:  
->> docker image rm <image-name>
+>> docker image rm `<image-name>`
  <br>
  <br>
  <br>
