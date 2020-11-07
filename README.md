@@ -1,4 +1,4 @@
-# Node-express-Mongo Boiler Plate
+# Node-Express-Mongo Boiler Plate
 
 ## Features: 
 
