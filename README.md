@@ -6,7 +6,7 @@
  <br>
 
 1. Node-Express Server
-2. Auth middleware made with jasonwebtokens, bcrypt and cookie-parser
+2. Auth middleware 
 3. Skeleton for schema and controllers 
 4. Data valiation in the schema
 5. Dockerised to support easy transfer efficient production build
@@ -15,6 +15,7 @@
 8. Gulp support (for minification/bundling/compression static data, cache busting and many other things )
 9. can support > 20 CRUD 
 10. Scalability
+11. Pagination middleware
 
 <br>
 <br>

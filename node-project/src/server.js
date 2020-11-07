@@ -3,8 +3,10 @@ require('dotenv').config()
 const cookieParser = require('cookie-parser')
 const mongoose = require('mongoose')
 // require('./src/db/mongoose.js')    ----  uncomment after setting your db -> details src/db/mongoose.js
+const apicache = require('apicache');
 const express = require('express')
 const app = express()
+let cache = apicache.middleware;
 const morgan = require('morgan');
 const port =  process.env.PORT || 8080;
 const bodyParser = require('body-parser')
@@ -18,6 +20,7 @@ app.use(cookieParser())
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(cors())
+app.use(cache('5 minutes'));
 app.use(compression({
     level:6,
     threshold: 50*1000,
@@ -35,8 +38,8 @@ app.get("/", async (req,res)=>{
         port:`This docker container is running on port ${port}`,
         loadBalancing: 'refresh to checkout load balancing',
         learnMore:'Refer to the README.md file to know how to get the most out of your boilerplate',
-        userRoutes:'Demo user route is available at : /user/userDemo1',
-        demoRoute: 'Another demo route is available at : /demo/demo1'
+        userRoutes:'Demo user route is available at : /user/v1/userDemo1',
+        demoRoute: 'Another demo route is available at : /demo/v1/demo1'
 
     })
 })
