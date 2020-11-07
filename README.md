@@ -77,8 +77,8 @@
 
 clone the repo
 cd into the repo then run the following commands:
->>     cd ./node-project  <br>
->>     npm install <br>
->>     npm start <br>
+>>     cd ./node-project 
+>>     npm install 
+>>     npm start 
 
 
